@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZOh-7V-Ol1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aZy-R0-SKU">
+            <objects>
+                <navigationController id="ZOh-7V-Ol1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mA0-4F-BK3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KDA-OL-jR1" kind="relationship" relationship="rootViewController" id="Qfq-6W-J5E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNz-wW-aKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2044" y="-123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WX3-iT-HtG">
+            <objects>
+                <viewController id="KDA-OL-jR1" customClass="ViewController" customModule="ZXAutoScrollView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oqU-Gn-YVt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bff-Nb-5pb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="37G-uD-vuu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNt-jQ-1Tl">
+                                <rect key="frame" x="106" y="168" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ZXAutoScrollView"/>
+                                <connections>
+                                    <action selector="ZXAutoView:" destination="KDA-OL-jR1" eventType="touchUpInside" id="HRy-4d-caJ"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="BR5-A8-AFI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-FP-1Tf">
+                                <rect key="frame" x="108" y="355" width="138" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ZXPageControlView"/>
+                                <connections>
+                                    <action selector="zxPageControl:" destination="KDA-OL-jR1" eventType="touchUpInside" id="Udm-Yh-zE5"/>
+                                    <segue destination="sTh-tc-dJ4" kind="show" id="2zC-yI-bqV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ysw-uY-Znz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cab-HO-9qY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="-124"/>
+        </scene>
+        <!--Test1 View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="Test1ViewController" customModule="ZXAutoScrollView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aK-2b-y0f" customClass="ZXAutoScrollView" customModule="ZXAutoScrollView">
+                                <rect key="frame" x="0.0" y="269" width="375" height="128"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YM8-iy-XHh"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g28-v9-08m">
+                                <rect key="frame" x="143" y="64" width="89" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oRX-Qu-kDv"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="g28-v9-08m" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Di2-oP-6DP"/>
+                            <constraint firstItem="g28-v9-08m" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Iwn-WY-LIt"/>
+                            <constraint firstAttribute="trailing" secondItem="3aK-2b-y0f" secondAttribute="trailing" id="TZa-F7-NzR"/>
+                            <constraint firstItem="3aK-2b-y0f" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ZFG-tX-5YT"/>
+                            <constraint firstItem="3aK-2b-y0f" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="asf-ri-GD0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="g28-v9-08m" id="mGe-Eg-63h"/>
+                        <outlet property="zxAutoScrollView" destination="3aK-2b-y0f" id="18h-sp-KQS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="-408"/>
+        </scene>
+        <!--Test2 View Controller-->
+        <scene sceneID="cjk-vG-PpW">
+            <objects>
+                <viewController id="sTh-tc-dJ4" customClass="Test2ViewController" customModule="ZXAutoScrollView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mL7-m5-nH3"/>
+                        <viewControllerLayoutGuide type="bottom" id="CQk-uc-Xms"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DEn-0T-Dlh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6m5-wB-48q" customClass="ZXPageControlView" customModule="ZXAutoScrollView_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="269" width="375" height="128"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="hyO-cg-GEc"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gug-F1-tQw">
+                                <rect key="frame" x="143" y="64" width="89" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gug-F1-tQw" firstAttribute="top" secondItem="mL7-m5-nH3" secondAttribute="bottom" id="Lo6-8o-4fA"/>
+                            <constraint firstAttribute="trailing" secondItem="6m5-wB-48q" secondAttribute="trailing" id="WHW-ly-sPa"/>
+                            <constraint firstItem="6m5-wB-48q" firstAttribute="centerY" secondItem="DEn-0T-Dlh" secondAttribute="centerY" id="fAl-6x-PzK"/>
+                            <constraint firstItem="gug-F1-tQw" firstAttribute="centerX" secondItem="DEn-0T-Dlh" secondAttribute="centerX" id="pFX-0D-fAV"/>
+                            <constraint firstItem="6m5-wB-48q" firstAttribute="leading" secondItem="DEn-0T-Dlh" secondAttribute="leading" id="xHz-x2-k6l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="gug-F1-tQw" id="fkR-rP-1MK"/>
+                        <outlet property="zxAutoScrollView" destination="6m5-wB-48q" id="RRB-QX-g8W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9IS-C5-j1L" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="259"/>
+        </scene>
+    </scenes>
+</document>
